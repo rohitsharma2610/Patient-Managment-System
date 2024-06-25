@@ -87,14 +87,14 @@ def patRemove():
 
 
 def dispPatient():
-    patdf = pd.read_csv("csvfile\\patientnew.csv", index_col= 0)
+    patdf = pd.read_csv("patientnew.csv", index_col= 0)
     print(patdf)
 
 
 
 def serPatientbyId(pid):
     global patdf
-    patdf = pd.read_csv("csvfile\\patientnew.csv", index_col = 0)
+    patdf = pd.read_csv("patientnew.csv", index_col = 0)
     if patdf.empty:
         return 0
     else:
@@ -102,7 +102,7 @@ def serPatientbyId(pid):
 
 def getPatient(pid):
     global patdf
-    patdf = pd.read_csv("csvfile\\patientnew.csv", index_col = 0)
+    patdf = pd.read_csv("patientnew.csv", index_col = 0)
     if patdf.empty:
         return "Invalid ID"
     else:
@@ -111,7 +111,7 @@ def getPatient(pid):
 
 
 def getPatientName(pid):
-    patdf = pd.read_csv("csvfile\\patientnew.csv", index_col = 0)
+    patdf = pd.read_csv("patientnew.csv", index_col = 0)
     if patdf.empty:
         return "Invalid ID"
     else:
@@ -121,13 +121,13 @@ def getPatientName(pid):
 
 def serPatientbyName():
     global patdf
-    patdf = pd.read_csv("csvfile\\patientnew.csv", index_col = 0)
+    patdf = pd.read_csv("patientnew.csv", index_col = 0)
     pname  = input("Patient Name :: ")
     print(patdf.loc[patdf['name'] == pname])
 
 def serPatientbyIDPrint():
     global patdf
-    patdf = pd.read_csv("csvfile\\patientnew.csv", index_col = 0)
+    patdf = pd.read_csv("patientnew.csv", index_col = 0)
     tid  = int(input("Patient ID :: "))
     print(patdf.loc[patdf['pid'] == tid])
 
