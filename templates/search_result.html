@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Patient Details</h1>
+    <div class="patient-details">
+    <ul>
+        <li><strong>ID:</strong> {{ patient['pid'] }}</li>
+        <li><strong>Name:</strong> {{ patient['name'] }}</li>
+        <li><strong>Age:</strong> {{ patient['age'] }}</li>
+        <li><strong>Weight:</strong> {{ patient['weight'] }}</li>
+        <li><strong>Gender:</strong> {{ patient['gender'] }}</li>
+        <li><strong>Address:</strong> {{ patient['address'] }}</li>
+        <li><strong>Phone Number:</strong> {{ patient['phoneno'] }}</li>
+        <li><strong>Disease:</strong> {{ patient['disease'] }}</li>
+    </ul>
+    </div>
+    <div class="bottom-links">
+    <a href="/menu">Back to Menu</a>
+    </div>
+</body>
+</html>

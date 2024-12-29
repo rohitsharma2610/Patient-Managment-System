@@ -1,0 +1,290 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #4A90E2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container to center align content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    border-color: #4A90E2;
+}
+
+button {
+    background-color: #4A90E2;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Links */
+a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation menu */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul li a:hover {
+    background-color: #357ABD;
+}
+
+/* Patient List Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Graphs Section */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    button {
+        padding: 12px;
+    }
+
+    ul li a {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Update Button Styling --- */
+.update-btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: auto; /* Ensure button width auto-adjusts */
+}
+
+.update-btn:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+.update-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.7); /* Focus effect */
+}
+
+.update-btn:active {
+    background-color: #285F8F;
+}
+
+/* --- Patient Details Section Styling --- */
+.patient-details {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-details h2 {
+    font-size: 24px;
+    color: #4A90E2;
+    margin-bottom: 15px;
+}
+
+.patient-details p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.patient-details .patient-info {
+    margin-top: 20px;
+}
+
+.patient-details .patient-info label {
+    font-weight: bold;
+    color: #333;
+}
+
+.patient-details .patient-info span {
+    color: #4A90E2;
+}
+
+/* Styling for patient detail links */
+.patient-details a {
+    color: #4A90E2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.patient-details a:hover {
+    text-decoration: underline;
+    color: #357ABD;
+}
+
+/* --- Styling for All Links at the Bottom of the Page --- */
+.bottom-links a {
+    color: #4A90E2;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+    background-color: #f4f7fc;
+}
+
+.bottom-links a:active {
+    background-color: #e0e0e0;
+}
+
+/* Center align bottom links */
+.bottom-links {
+    text-align: center;
+    margin-top: 30px;
+}

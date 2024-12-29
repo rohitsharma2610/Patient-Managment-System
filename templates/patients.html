@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Patients</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>All Patient Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Weight</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Disease</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+            <tr>
+                <td>{{ patient.pid }}</td>
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.age }}</td>
+                <td>{{ patient.weight }}</td>
+                <td>{{ patient.gender }}</td>
+                <td>{{ patient.address }}</td>
+                <td>{{ patient.phoneno }}</td>
+                <td>{{ patient.disease }}</td>
+                <td>
+                    <a href="/update/{{ patient.pid|int }}">Update</a> |
+                    <form action="/delete/{{ patient.pid }}" method="post" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="bottom-links">
+    <a href="/menu">Back to Menu</a>
+</div>
+</body>
+</html>
